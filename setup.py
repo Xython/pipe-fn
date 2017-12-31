@@ -1,7 +1,11 @@
 from distutils.core import setup
 
+with open('./README.rst', encoding='utf-8') as f:
+    readme = f.read()
+
 setup(
     name='pipe-fn',
+    long_description=readme,
     version='0.1',
     packages=['pipe_fn'],
     url='https://github.com/Xython/pipe-fn',
