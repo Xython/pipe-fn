@@ -17,6 +17,8 @@ print([2, 3, -1] | e ** {'key': lambda x: -x} / sorted)  # set kwargs
 # => [3, 2, -1]
 
 print([[1], [2], [3]] | e / sum * ([],))  # set args
+
+
 # sum([[1], [2], [3]], [])
 # => [1, 2, 3]
 
@@ -35,6 +37,8 @@ print([1, 2, 3]
 
 
 print(1 | e / add * (1,))
+
+
 # add(1, 1)
 # => 2
 
@@ -47,4 +51,10 @@ def double(x):
 print(1 | (e / add * (2,) + double + double))
 # double(double(add(1, 2))
 # => 12 = (1 + 2) * 2 * 2
+
+
+# set single arg
+[['a'], ['b']] | e / sum @ [] | e / print
+# print(sum([['a'], ['b']], []))
+# => [1, 2]
 

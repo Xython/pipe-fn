@@ -60,5 +60,19 @@ print(1 | (e / add * (2,) + double + double))
 # => 12 = (1 + 2) * 2 * 2
 
 
+# set single arg
+[['a'], ['b']] | e / sum @ [] \
+               | e / print
+# print(sum([['a'], ['b']], []))
+# => [1, 2]
+
+def double(x):
+    return 2 * x
+
+
+[1, 2, 3] | e / std.general.Sum @ double  \
+          | e / print
+# print(Sum([1,2,3], double))
+# => 12
 
 ```

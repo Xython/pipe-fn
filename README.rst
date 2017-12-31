@@ -64,5 +64,20 @@ Function transformation purely.
     # => 12 = (1 + 2) * 2 * 2
 
 
+    # set single arg
+    [['a'], ['b']] | e / sum @ [] \
+                   | e / print
+    # print(sum([['a'], ['b']], []))
+    # => [1, 2]
+
+    def double(x):
+        return 2 * x
+
+
+    [1, 2, 3] | e / std.general.Sum @ double  \
+              | e / print
+    # print(Sum([1,2,3], double))
+    # => 12
+
 .. |PyPI version| image:: https://img.shields.io/pypi/v/pipe-fn.svg
    :target: https://pypi.python.org/pypi/pipe-fn

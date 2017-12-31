@@ -40,6 +40,9 @@ class Pipe:
                           self.f_continue,
                           self.f(left, *self.args, **self.kwargs))
 
+    def __matmul__(self, other):
+        return Pipe(self.f, self.args + (other, ), self.kwargs)
+
     def __ror__(self, left):
         return self(left)
 
