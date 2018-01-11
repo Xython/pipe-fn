@@ -55,4 +55,4 @@ class Pipe:
             return Pipe(self.f, self.args, self.kwargs, self.f_continue + (then,))
 
 
-e = Pipe(lambda x: x, (), dict())
+infix = e = Pipe(lambda x: x, (), dict())
