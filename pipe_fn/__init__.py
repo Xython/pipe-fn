@@ -48,7 +48,7 @@ class Pipe:
 
     def __add__(self, then):
         if not callable(then):
-            raise ValueError(f'`callable` expected, but get a `{then.__class__}` instead.')
+            raise ValueError('`callable` expected, but get a `{}` instead.'.format(then.__class__))
         if not self.f_continue:
             return Pipe(self.f, self.args, self.kwargs, (then,))
         else:

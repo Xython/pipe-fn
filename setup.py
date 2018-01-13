@@ -6,7 +6,7 @@ with open('./README.rst', encoding='utf-8') as f:
 setup(
     name='pipe-fn',
     long_description=readme,
-    version='0.2.1',
+    version='0.2.2',
     packages=['pipe_fn'],
     url='https://github.com/Xython/pipe-fn',
     license='MIT',
